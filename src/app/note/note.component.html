@@ -1,0 +1,24 @@
+<div>
+  <app-note-form></app-note-form>
+
+  <div class="card-container">
+    <div *ngFor="let note of getNotes()">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="noteBanner" (click)="deleteNote(note.title)">
+              X
+            </div>
+            <div class="noteBody">
+              <h2> {{note.title}} </h2>
+              <p>{{note.body}}</p>
+            </div>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+    <br>
+  </div>
+
+</div>

@@ -1,0 +1,78 @@
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  h2,p{
+    font-size:100%;
+    font-weight:normal;
+  }
+  ul,li{
+    list-style:none;
+  }
+  ul{
+    overflow:hidden;
+    padding:3em;
+  }
+  ul li a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:10em;
+    width:10em;
+  }
+  ul li{
+    margin:1em;
+    float:left;
+  }
+
+  .round-button {
+    width:10%;
+    
+  }
+  .round-button-circle {
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border:5px solid #ceecc8;
+    overflow:hidden;
+          
+    background: rgb(73, 187, 92); 
+    box-shadow: 0 0 3px gray;
+  }
+  .round-button-circle:hover {
+    background:#35b13b;
+  }
+  .round-button p {
+    //postioning etc
+    display:block;
+    float:left;
+    width:100%;
+    padding-top:50%;
+    // padding-bottom:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    
+    //text etc...
+    text-align:center;
+    color:#e2eaf3;
+    font-family:Verdana;
+    font-size:2.8em;
+    font-weight:bold;
+    text-decoration:none;
+  }
+  .noteBanner
+  {
+    background-color: yellow;
+    opacity: 0.75;
+    padding-left: 0.5em;
+  }
+  .noteBody
+  {
+    padding:1em;
+  }
