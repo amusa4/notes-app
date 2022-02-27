@@ -1,0 +1,161 @@
+/* Button used to open the contact form - fixed at the bottom of the page */
+.note-form-container
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border: #35b13b;
+    resize: both;
+    overflow: auto;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #3CBC8D;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 20px 16px;
+    // background-color: #3CBC8D;
+    background-color: white;
+    color: white;
+  }
+  .round-button {
+    width:10%;
+  }
+  .round-button-circle {
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border:5px solid #ceecc8;
+    overflow:hidden;
+          
+    background:#35b13b; 
+    box-shadow: 0 0 3px gray;
+  }
+  .round-button-circle:hover {
+    background:#35b13b;
+  }
+  .round-button p {
+    //postioning etc
+    display:block;
+    float:left;
+    width:100%;
+    padding-top:50%;
+    // padding-bottom:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    
+    //text etc...
+    text-align:center;
+    color:#e2eaf3;
+    font-family:Verdana;
+    font-size:2.8em;
+    font-weight:bold;
+    text-decoration:none;
+  }
+
+  .ConfirmButton {
+    background-color: #3CBC8D;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 10px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .ConfirmButton:hover {opacity: 1}
+
+  .button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 8.5px 20px;
+    font-size: 16px;
+  }
+  
+  .button4:hover {background-color: #e0d7d7;border: 2px solid #e0d7d7;}
+
+  .form
+  {
+    width:50%; 
+    margin:0 auto;
+    padding-top: 1.85%;
+    padding-bottom: 1.85%;
+  }
+
+//   ::-webkit-resizer {
+//     border: 2px solid yellow;
+//     background: blue;
+//     box-shadow: 0 0 2px 5px red;
+//     outline: 2px dashed green;
+
+//     /*size does not work*/  
+//     display:block;  
+//     width: 150px !important;
+//     height: 150px !important;
+// }

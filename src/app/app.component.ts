@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Note } from './note';
+import { Component, EventEmitter, Output } from '@angular/core';
+import {Notes} from './note/notes';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,14 @@ import { Note } from './note';
 
 
 export class AppComponent {
+  @Output() AddNote = new EventEmitter<any>();
 
   title = 'notes-app';
-  firstNote = new Note('First Note', 'HEYYY');
-  Notes = [this.firstNote];
+
+  public addNote(title: string, body: string) {
+    this.AddNote.emit({title, body});
+  }
 
 }
+
+

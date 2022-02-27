@@ -1,0 +1,18 @@
+{
+    "NoteGA": {
+      "title": "Note Title Generated A",
+      "body": "Note Body Generated A"
+    },
+    "NoteGB": {
+      "title": "Note Title Generated B",
+      "body": "Note Body Generated B"
+    },
+    "NoteGC": {
+      "title": "Note Title Generated C",
+      "body": "Note Body Generated C"
+    },
+    "NoteGD": {
+      "title": "Note Title Generated D",
+      "body": "Note Body Generated D"
+    }
+  }
