@@ -1,4 +1,3 @@
-
 <div class="note-form-container">
 
     <h2>Click to add note</h2>
@@ -6,37 +5,55 @@
 
     <!-- Trigger/Open The Modal-->
     <!-- <button id="myBtn" (click)="toggle()">Open Modal</button> -->
-    <div class="round-button" (click)="toggle()">
+    <div class="round-button" (click)="formService.toggle()">
         <div class="round-button-circle">
             <p class="round-button">+</p>
         </div>
     </div>
 
     <!-- The Modal -->
-    <div [style.display]="switchForm ? 'block' : 'none'" class="modal">
+    <div [style.display]="formService.switchForm ? 'block' : 'none'" class="modal" #modal>
 
         <!-- Modal content -->
-        <div class="modal-content">
+        <div class="modal-content" #modalContent>
             <div class="modal-header">
-                <div [style.display]="switchForm ? 'block' : 'none'" (click)=toggle()>
+                <div [style.display]="formService.switchForm ? 'block' : 'none'" (click)=formService.onClose()>
                     <span class="close">&times;</span>
                 </div>
-                <h2>Note</h2>
+                <div *ngIf="formService.onEdit else Edit">
+                    <h2>Edit Note</h2>
+                </div>
+
+                <ng-template #Edit>
+                    <h2>Add Note</h2>
+                </ng-template>
             </div>
             <div class="modal-body">
                 <form class="form">
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value="John"><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-                    <!-- <input class="btn btn-success" type="submit" value="Submit"> -->                   
-                    <button type="button" class="ConfirmButton">Add Note</button> 
-                    <button class="button button4">Cancel</button> 
-                </form> 
+                    <div *ngIf="formService.onEdit else NewNote">
+                        <label for="fname">Note Title:</label><br>
+                        <input type="text" #title name="name" value={{formService.getFormTitle()}}><br>
+                        <label for="lname"> Note Body:</label><br>
+                        <input type="text" #body name="lname" value={{formService.getFormBody()}}><br><br>
+                        <button type="button" (click)="editNote(title, body)" class="ConfirmButton">Save</button>
+                        <button type="button" (click)="formService.onClose()" class="button button4">Cancel</button>
+                    </div>
+
+                    <ng-template #NewNote>
+                        <label for="fname">Note Title:</label><br>
+                        <input type="text" #title name="name" value="{{title.value}}"><br>
+                        <label for="lname"> Note Body:</label><br>
+                        <input type="text" #body name="lname" value="{{body.value}}"><br><br>
+                        <button type="button" (click)="save(title, body)" class="ConfirmButton">Save</button>
+                        <button type="button" (click)="formService.onClose()" class="button button4">Cancel</button>
+                    </ng-template>
+
+                </form>
             </div>
             <div class="modal-footer">
-               
+
             </div>
         </div>
 
     </div>
+</div>

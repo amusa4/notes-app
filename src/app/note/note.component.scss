@@ -54,7 +54,6 @@
     float:left;
     width:100%;
     padding-top:50%;
-    // padding-bottom:50%;
     line-height:1em;
     margin-top:-0.5em;
     
@@ -66,13 +65,19 @@
     font-weight:bold;
     text-decoration:none;
   }
+
   .noteBanner
   {
+    display: grid;
+    grid-template-columns: 15% 85%;
     background-color: yellow;
     opacity: 0.75;
     padding-left: 0.5em;
   }
+
   .noteBody
   {
     padding:1em;
+    background: cornsilk;
   }
+  

@@ -13,11 +13,8 @@ export class AppComponent {
 
   title = 'notes-app';
 
-  initialCount: number = 10;
-
   public addNote(title: string, body: string) {
     this.AddNote.emit({title, body});
-    console.log("yooo");
   }
 
 }

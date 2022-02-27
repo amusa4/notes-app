@@ -32,6 +32,8 @@
     animation-name: animatetop;
     animation-duration: 0.4s;
     border: #35b13b;
+    resize: both;
+    overflow: auto;
   }
   
   /* Add Animation */
@@ -51,6 +53,7 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    padding: 10px;
   }
   
   .close:hover,
@@ -70,7 +73,8 @@
   
   .modal-footer {
     padding: 20px 16px;
-    background-color: #3CBC8D;
+    // background-color: #3CBC8D;
+    background-color: white;
     color: white;
   }
   .round-button {
@@ -143,3 +147,15 @@
     padding-top: 1.85%;
     padding-bottom: 1.85%;
   }
+
+//   ::-webkit-resizer {
+//     border: 2px solid yellow;
+//     background: blue;
+//     box-shadow: 0 0 2px 5px red;
+//     outline: 2px dashed green;
+
+//     /*size does not work*/  
+//     display:block;  
+//     width: 150px !important;
+//     height: 150px !important;
+// }

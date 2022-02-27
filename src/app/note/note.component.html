@@ -1,22 +1,30 @@
-<div>
+<div (click)="closeNoteForm($event)">
   <app-note-form></app-note-form>
 
   <div class="card-container">
-    <div *ngFor="let note of getNotes()">
-      <ul>
-        <li>
-          <a href="#">
-            <div class="noteBanner" (click)="deleteNote(note.title)">
-              X
-            </div>
-            <div class="noteBody">
-              <h2> {{note.title}} </h2>
-              <p>{{note.body}}</p>
-            </div>
+    <div (click)="editNote(note.title, note.body, note.id)" *ngFor="let note of notes">
+      <div>
+        <ul>
+          <li>
+            <div class="note">
 
-          </a>
-        </li>
-      </ul>
+              <div class="noteBanner">
+                <div class="closeArea" (click)="deleteNote(note.id)">
+                  X
+                </div>
+                <div class="banner"></div>
+              </div>
+
+              <div class="noteBody">
+                <h2> {{note.title}} </h2>
+                <p>{{note.body}}</p>
+                <p>{{note.id}}</p>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <br>
   </div>
